@@ -1,15 +1,21 @@
-#include<stdio.h>
-void change(int num)
+#include<iostream>
+#include<conio.h>
+
+void swap(int a, int b)
 {
-	printf("\nThe value before function %d",num);
-	num=num+100;
-	printf("\n The value after function %d ",num);
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
 }
-main()
+
+int main()
 {
-	int x=100;
-	printf("\nThe value of x before function call %d",x);
-	change(x);
-	printf("\n The value of x after function call %d",x);
-	return 0;
+    int a = 100, b = 200;
+    clrscr();
+    swap(a, b);  // passing value to function
+    cout<<"Value of a"<<a;
+    cout<<"Value of b"<<b;
+    getch();
+    return 0;
 }
